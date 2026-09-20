@@ -1,3 +1,4 @@
+using Xunit;
 using UnitConversion.Api.Converters;
 namespace UnitConversion.Api.Tests;
 public sealed class ConverterTests
