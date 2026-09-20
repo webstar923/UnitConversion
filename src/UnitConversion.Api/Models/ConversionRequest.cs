@@ -1,6 +1,14 @@
 using System.ComponentModel.DataAnnotations;
+
 namespace UnitConversion.Api.Models;
-public sealed record ConversionRequest(
-    [property: Required] double Value,
-    [property: Required, MinLength(1)] string FromUnit,
-    [property: Required, MinLength(1)] string ToUnit);
+
+public sealed class ConversionRequest
+{
+    public double Value { get; init; }
+
+    [Required]
+    public string FromUnit { get; init; } = string.Empty;
+
+    [Required]
+    public string ToUnit { get; init; } = string.Empty;
+}
